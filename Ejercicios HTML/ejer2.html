@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ejercicio de HTML: incrustar imagen y video con marcadores internos">
+    <meta name="author" content="Tu Nombre">
+    <title>Ejercicio 2 - Imagen y Video con Marcadores</title>
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Multimedia: Imagen y Video con Marcadores</h1>
+            <p>Este ejercicio muestra cómo incrustar una imagen y un video de YouTube, y cómo usar marcadores para navegar entre ellos.</p>
+        </header>
+
+        <nav class="nav">
+
+            <a href="#imagen">Ir a la imagen</a>
+            <a href="#video">Ir al video</a>
+        </nav>
+
+        <section id="imagen">
+            <h2>Imagen de ejemplo</h2>
+
+            <img src="https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=600&q=80" alt="Campo de flores silvestres" width="600" height="400">
+            <p>Descripción: Imagen libre (Unsplash) de flores silvestres. Fuente: Unsplash (uso libre).</p>
+            <p><a href="#video">Ir al video</a></p>
+        </section>
+
+        <section id="video">
+            <h2>Video incrustado (YouTube)</h2>
+            <p>Video de ejemplo incrustado desde YouTube. Usa el botón Compartir</p>
+          
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/nqCNLb1Q26E?si=pXxwk5dwuHI0ksgC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p><a href="#imagen">Volver a la imagen</a></p>
+        </section>
+
+        <footer>
+            <p>Autor: Adrian fernandez — Ejercicio de HTML con contenido incrustado y marcadores.</p>
+        </footer>
+    </div>
+</body>
+</html>
