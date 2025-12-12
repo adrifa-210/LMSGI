@@ -1,0 +1,47 @@
+* {
+    color: #f8fafc;
+}
+
+.cta-container {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.cta-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(wallpaper-container.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    filter: blur(5px);
+    transform: scale(1.1);
+    /* Slight scale to avoid blurred edges */
+}
+
+.cta-text {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cta-button {
+    background-color: #3b82f6;
+    color: #ffffff;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
