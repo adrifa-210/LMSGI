@@ -1,0 +1,81 @@
+* {
+    color: #f8fafc;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cyberpunk', sans-serif;
+}
+
+.cta-container {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.cta-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(wallpaper-container.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    filter: blur(5px);
+    transform: scale(1.1);
+}
+
+.cta-text {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cta-button {
+    background-color: #3b82f6;
+    color: #ffffff;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/*menu*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0f172a;
+    padding: 15px;
+    align-items: center;
+}
+
+nav h1 {
+    padding-left: 15px;
+    color: #38bdf8;
+}
+
+.nav-list {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    flex-direction: row;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #94a3b8;
+    font-size: large;
+    font-weight: bold;
+}
+
+.nav-list a:hover {
+    color: #38bdf8;
+}
