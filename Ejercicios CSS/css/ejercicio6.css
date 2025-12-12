@@ -1,0 +1,265 @@
+/* ===== VARIABLES (Ejercicio 7)===== */
+:root {
+    --bg-color: #0f172a;
+    --primary-color: #3b82f6;
+    /* Blue */
+    --secondary-color: #94a3b8;
+    /* Slate */
+    --accent-color: #38bdf8;
+    /* Sky */
+    --text-white: #f8fafc;
+
+    --font-main: 'Cyberpunk', sans-serif;
+    --font-secondary: Verdana, Geneva, Tahoma, sans-serif;
+
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+    --spacing-xl: 32px;
+}
+
+/* ===== ESTILOS GLOBALES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+/* ===== NAVEGACIÓN (Ejercicio 3) ===== */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-color);
+    padding: var(--spacing-md);
+}
+
+nav h1 {
+    padding-left: var(--spacing-md);
+    color: var(--primary-color);
+}
+
+.nav-list {
+    display: flex;
+    gap: var(--spacing-lg);
+    list-style-type: none;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: large;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: var(--accent-color);
+}
+
+/* ===== HERO SECTION (Ejercicio 3) ===== */
+.cta-container {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.cta-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(wallpaper-container.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    filter: blur(5px);
+    transform: scale(1.1);
+}
+
+.cta-text {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: var(--spacing-md) 30px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+/* ===== SECCIONES COMUNES ===== */
+.section-title {
+    padding: var(--spacing-sm) 0;
+    color: var(--accent-color);
+    text-align: center;
+    font-size: 2rem;
+    font-family: var(--font-secondary);
+}
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-xl);
+}
+
+.gallery-item {
+    width: calc(33% - var(--spacing-xl));
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* ===== GALLERY SECTION (Ejercicio 4) ===== */
+#gallery-section {
+    padding: var(--spacing-lg) 0;
+}
+
+#gallery-section .title {
+    padding: var(--spacing-sm) 0;
+    color: var(--accent-color);
+    text-align: center;
+    font-size: 2rem;
+    font-family: var(--font-secondary);
+}
+
+#gallery-section .gallery-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-xl);
+}
+
+#gallery-section .gallery-list .gallery-item {
+    width: calc(33% - var(--spacing-xl));
+}
+
+#gallery-section .gallery-list .gallery-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+/* ===== CARD SECTION (Ejercicio 4 y 5) ===== */
+#card-section {
+    padding: var(--spacing-lg) 0;
+}
+
+#card-section .title {
+    padding: var(--spacing-sm) 0;
+    color: var(--cafe-accent);
+    text-align: center;
+    font-size: 2rem;
+    font-family: var(--font-secondary);
+    /* Cafe Theme Override */
+    --cafe-bg: #1c1917;
+    --cafe-accent: #d97706;
+    --cafe-text: #e7e5e4;
+    background-color: var(--cafe-bg);
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-xl) 0;
+}
+
+#card-section .gallery-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-xl);
+}
+
+#card-section .gallery-list .gallery-item {
+    width: calc(33% - var(--spacing-xl));
+}
+
+#card-section .gallery-list .gallery-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    aspect-ratio: 4;
+    object-fit: cover;
+}
+
+#card-section .gallery-list .gallery-item .encabezado {
+    color: var(--cafe-accent);
+    text-align: center;
+    margin-top: var(--spacing-sm);
+}
+
+#card-section .gallery-list .gallery-item .texto {
+    color: var(--cafe-text);
+    text-align: justify;
+    margin: var(--spacing-sm) 0;
+}
+
+#card-section .gallery-list .gallery-item .boton {
+    text-align: center;
+    margin-top: var(--spacing-sm);
+}
+
+#card-section .gallery-list .gallery-item .boton button {
+    color: var(--cafe-bg);
+    background-color: var(--cafe-accent);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#card-section .gallery-list .gallery-item .boton button:hover {
+    color: var(--cafe-accent);
+    background-color: #44403c;
+}
+
+/* ===== FOOTER (Ejercicio 6) ===== */
+footer {
+    border-top: 2px solid var(--primary-color);
+    padding: 18px 0 8px 0;
+    color: var(--text-white);
+    position: absolute;
+    top: 2500px;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+footer a {
+    display: block;
+    align-items: center;
+    margin: 8px 0;
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+footer a:hover {
+    color: var(--primary-color);
+}
