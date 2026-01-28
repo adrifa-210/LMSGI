@@ -114,29 +114,15 @@ nav ul.menu li a:hover {
     justify-content: center;
     align-items: center;
     position: relative;
-    /* Apply sepia filter to the background image only via pseudo-element or directly if text shouldn't be affected. 
-       However, standard CSS filter on container affects children. 
-       To avoid affecting text, we usually use a pseudo-element. 
-       But the prompt says "Aplica un filtro sepia del 30% ... la pagina debe quedar como en la imagen".
-       Looking at the image, the text is dark, maybe the filter applies to everything?
-       Let's try applying it to the container first, as requested. */
     filter: sepia(30%);
 }
-
-/* Fix for text being affected by filter if unwanted: 
-   If the user wants the text to NOT be sepia, we'd need a different approach.
-   But "Aplica un filtro sepia del 30% ... en el Contenedor cta-container" implies the container itself.
-*/
 
 .cta-container h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     font-size: 5rem;
     color: #333;
-    /* Dark text based on image */
     text-shadow: 8px 4px 6px var(--hover-light);
-    /* Counteract the sepia filter on the text if it looks bad? 
-       For now, I will leave it as the instruction says apply to container. */
 }
 
 /* Footer */
